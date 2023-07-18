@@ -1,9 +1,10 @@
 const bodyParser = require('body-parser')
-// const automovel = require('./automovelRoute')
+const cadastro = require('./cadastroRoute')
+const home = require('./homeRoute')
 // const motorista = require('./motoristaRoute')
 // const utilizacao = require('./utilizacaoRoute')
 
 module.exports = app =>{
     app.use(bodyParser.json())
-    // app.use(automovel, motorista, utilizacao)
+    app.use(cadastro, home)
 }
